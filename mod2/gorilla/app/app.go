@@ -12,9 +12,9 @@ func Start() {
 
 	router.HandleFunc("/greet", greet).Methods(http.MethodGet)
 	router.HandleFunc("/customer", getAllCustomers).Methods(http.MethodGet)
-	router.HandleFunc("/customer", createCostumer).Methods(http.MethodPost)
+	router.HandleFunc("/customer", createCustomer).Methods(http.MethodPost)
 
-	router.HandleFunc("/customer/{customer_id:[0-9]*}", getCostumer).Methods(http.MethodGet)
+	router.HandleFunc("/customer/{customer_id:[0-9]*}", getCustomer).Methods(http.MethodGet)
 
 	server := &http.Server{
 		Addr:    "localhost:8000",

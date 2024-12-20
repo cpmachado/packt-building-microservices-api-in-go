@@ -34,11 +34,11 @@ func getAllCustomers(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
-func getCostumer(w http.ResponseWriter, r *http.Request) {
+func getCustomer(w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
 	fmt.Print(w, vars["customer_id"])
 }
 
-func createCostumer(w http.ResponseWriter, _ *http.Request) {
+func createCustomer(w http.ResponseWriter, _ *http.Request) {
 	fmt.Print(w, "Post request received")
 }
